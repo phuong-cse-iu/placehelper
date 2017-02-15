@@ -31,12 +31,16 @@ class MapVC: UIViewController {
         let session = URLSession.shared
         session.dataTask(with: urlRequest, completionHandler: { (data, response, err) in
             if err != nil {
-                print(err)
+//                print(err)
             }
             do {
                 if (data != nil) {
-                    let object = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-                    print(object)
+                    let object:Dictionary<String, AnyObject> = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, AnyObject>
+                    
+                    let results:Array<Dictionary<String, AnyObject>> = object["results"] as! Array<Dictionary<String, AnyObject>>
+                    if (results != nil) {
+                        print(results[0])
+                    }
                     
                 }
                 

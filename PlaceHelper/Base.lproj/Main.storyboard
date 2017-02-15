@@ -91,12 +91,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EKv-rw-eje">
-                                <rect key="frame" x="0.0" y="30" width="375" height="637"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EKv-rw-eje">
+                                <rect key="frame" x="0.0" y="50" width="320" height="518"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EKv-rw-eje" firstAttribute="top" secondItem="ht3-VZ-fTS" secondAttribute="bottom" constant="30" id="dOb-jz-mMg"/>
+                            <constraint firstAttribute="trailing" secondItem="EKv-rw-eje" secondAttribute="trailing" id="gM0-zP-4yu"/>
+                            <constraint firstItem="ney-gw-Fnu" firstAttribute="top" secondItem="EKv-rw-eje" secondAttribute="bottom" id="suE-9k-Uj1"/>
+                            <constraint firstItem="EKv-rw-eje" firstAttribute="leading" secondItem="pjk-iE-7hR" secondAttribute="leading" id="xiT-wP-kew"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="EKv-rw-eje" id="iex-xW-11h"/>
@@ -104,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWg-OU-AcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1189" y="-401"/>
+            <point key="canvasLocation" x="1363.125" y="-501.76056338028172"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zDv-Z6-gQV">

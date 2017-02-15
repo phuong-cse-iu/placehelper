@@ -63,7 +63,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locManager.requestWhenInUseAuthorization()
         locManager.startUpdatingLocation()
         
-        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.title = "Welcome"
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Savoye LET", size: 40)!]
         
@@ -116,17 +115,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func aBtn(_ sender: Any) {
-        let request_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=\(txtFieldSearch.text!)&location=\(Location.sharedInstance.latitude!),%\(Location.sharedInstance.longtitude!)&radius=500&key=\(apiKey)"
-        
-        let mapvc:MapVC = storyboard?.instantiateViewController(withIdentifier: "map") as! MapVC
-        mapvc.req_url = request_url
-        self.navigationController?.pushViewController(mapvc, animated: true)
-        
-        
-        
-        
-        
-        print(request_url)
+        if txtFieldSearch.text == "" {
+            let alertController = UIAlertController(title: "WARNING!!!", message: "Please type your place", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            let request_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=\(txtFieldSearch.text!)&location=\(Location.sharedInstance.latitude!),\(Location.sharedInstance.longtitude!)&radius=500&key=\(apiKey)"
+            
+            let mapvc:MapVC = storyboard?.instantiateViewController(withIdentifier: "map") as! MapVC
+            mapvc.req_url = request_url
+            self.navigationController?.pushViewController(mapvc, animated: true)
+
+        }
+
 
     }
 
