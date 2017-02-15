@@ -94,8 +94,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         view.layer.insertSublayer(playerLayer, at: 0)
         playerLayer.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        
-        
+     
     }
     
     
@@ -128,10 +127,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.navigationController?.pushViewController(mapvc, animated: true)
 
         }
-
-
     }
-
 }
 
 
