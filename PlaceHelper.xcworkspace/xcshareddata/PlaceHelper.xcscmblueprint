@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6B41477ECBF6F918C6F9B07209521E94B9E4C0D1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6B41477ECBF6F918C6F9B07209521E94B9E4C0D1" : 9223372036854775807,
+    "BE6419FAA9544BC82161A4A6097AC7A0AFE51679" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7D2E20D8-70B3-4ED1-A082-01831958EEA4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6B41477ECBF6F918C6F9B07209521E94B9E4C0D1" : "PlaceHelper\/",
+    "BE6419FAA9544BC82161A4A6097AC7A0AFE51679" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PlaceHelper",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PlaceHelper.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/phuong-cse-iu\/placehelper.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6B41477ECBF6F918C6F9B07209521E94B9E4C0D1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/phuong-cse-iu\/ios-learning.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BE6419FAA9544BC82161A4A6097AC7A0AFE51679"
+    }
+  ]
+}

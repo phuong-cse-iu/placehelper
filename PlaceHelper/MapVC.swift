@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import FacebookShare
 
 class MapVC: UIViewController {
 
@@ -16,7 +17,8 @@ class MapVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        mapView.delegate = self
         // Do any additional setup after loading the view.
         print(req_url)
         mapView.setupMap(lat: Location.sharedInstance.latitude, lon: Location.sharedInstance.longtitude, span: 0.01)
@@ -32,20 +34,22 @@ class MapVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if ((req_url) != nil) {
+        if (req_url != nil) {
             let url = URL(string: req_url)
-            let urlRequest = URLRequest(url: url!)
-            let session = URLSession.shared
-            session.dataTask(with: urlRequest, completionHandler: { (data, response, err) in
-                if err != nil {
-                    //                print(err)
-                }
-                do {
-                    if (data != nil) {
-                        let object:Dictionary<String, AnyObject> = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, AnyObject>
-                        
-                        let results:Array<Dictionary<String, AnyObject>> = object["results"] as! Array<Dictionary<String, AnyObject>>
-                        if (results != nil) {
+            let urlRequest:URLRequest!
+            if (url != nil) {
+                urlRequest = URLRequest(url: url!)
+                let session = URLSession.shared
+                session.dataTask(with: urlRequest, completionHandler: { (data, response, err) in
+                    if err != nil {
+                        //                print(err)
+                    }
+                    do {
+                        if (data != nil) {
+                            let object:Dictionary<String, AnyObject> = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, AnyObject>
+                            
+                            let results:Array<Dictionary<String, AnyObject>> = object["results"] as! Array<Dictionary<String, AnyObject>>
+                            
                             for result in results {
                                 self.places.append(Place(result: result))
                             }
@@ -55,15 +59,21 @@ class MapVC: UIViewController {
                                     self.mapView.addPlace(lat: place.lat, lng: place.lng, title: place.address, subTitle: place.name)
                                 }
                             }
+                            
+                            
                         }
+                        
+                    } catch {
                         
                     }
                     
-                } catch {
-                    
-                }
-                
-            }).resume()
+                }).resume()
+            }
+            
+            
+            
+        } else {
+            print("no request url")
         }
 
     }
@@ -88,4 +98,28 @@ extension MKMapView {
         anno.subtitle = subTitle
         self.addAnnotations([anno])
     }
+}
+
+extension MapVC: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+//        print(view.annotation?.title)
+        
+        let title = view.annotation?.title
+        let subTit = view.annotation?.subtitle
+        let textToshare = [title, subTit]
+        
+        let shareMessengerActivity = CustomFBMessengerShareActivity()
+        let customActivityTypes = [shareMessengerActivity]
+        
+        let activityViewController = UIActivityViewController(activityItems: textToshare, applicationActivities: customActivityTypes)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [UIActivityType.postToFacebook, UIActivityType.mail]
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        <#code#>
+//    }
+    
+    
 }
