@@ -6,5 +6,6 @@ target 'PlaceHelper' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
-
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
 end

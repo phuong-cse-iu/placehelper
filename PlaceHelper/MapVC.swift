@@ -21,7 +21,7 @@ class MapVC: UIViewController {
         mapView.delegate = self
         // Do any additional setup after loading the view.
         print(req_url)
-        mapView.setupMap(lat: Location.sharedInstance.latitude, lon: Location.sharedInstance.longtitude, span: 0.01)
+        mapView.setupMap(lat: Location.sharedInstance.latitude, lon: Location.sharedInstance.longtitude, span: 0.05)
         mapView.showsUserLocation = true
         
 //        let diadiem1:MKPointAnnotation = MKPointAnnotation()
