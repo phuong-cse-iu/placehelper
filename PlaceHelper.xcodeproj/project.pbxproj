@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4E0472001E5438AF00C25552 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0471FF1E5438AF00C25552 /* Place.swift */; };
 		4E925BEA1E572AA000FC2939 /* CustomFBMessengerShareActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E925BE91E572AA000FC2939 /* CustomFBMessengerShareActivity.swift */; };
-		4E925BEC1E5742D400FC2939 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4E925BEB1E5742D400FC2939 /* video.mp4 */; };
 		4E9FA7FD1E52E43100DC188F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FA7FC1E52E43100DC188F /* Location.swift */; };
 		4EB34C091E518FCF00CCBF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB34C081E518FCF00CCBF9F /* AppDelegate.swift */; };
 		4EB34C0B1E518FCF00CCBF9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB34C0A1E518FCF00CCBF9F /* ViewController.swift */; };
@@ -27,7 +26,6 @@
 		478F0BA0CB76364AF11E1074 /* Pods_PlaceHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0471FF1E5438AF00C25552 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		4E925BE91E572AA000FC2939 /* CustomFBMessengerShareActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFBMessengerShareActivity.swift; sourceTree = "<group>"; };
-		4E925BEB1E5742D400FC2939 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		4E9FA7FC1E52E43100DC188F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		4EB34C051E518FCF00CCBF9F /* PlaceHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB34C081E518FCF00CCBF9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 				4EB34C0A1E518FCF00CCBF9F /* ViewController.swift */,
 				4EB34C0C1E518FCF00CCBF9F /* Main.storyboard */,
 				4EB34C0F1E518FCF00CCBF9F /* Assets.xcassets */,
-				4E925BEB1E5742D400FC2939 /* video.mp4 */,
 				4EB34C111E518FCF00CCBF9F /* LaunchScreen.storyboard */,
 				4EB34C141E518FCF00CCBF9F /* Info.plist */,
 				4EB34C1A1E5190B700CCBF9F /* MapVC.swift */,
@@ -178,7 +175,6 @@
 				4EB34C131E518FCF00CCBF9F /* LaunchScreen.storyboard in Resources */,
 				4EB34C101E518FCF00CCBF9F /* Assets.xcassets in Resources */,
 				4EB34C0E1E518FCF00CCBF9F /* Main.storyboard in Resources */,
-				4E925BEC1E5742D400FC2939 /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,8 +25,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         myLocation = locations[0]
         
 //        print(myLocation.coordinate.latitude)
-//        print(myLocation.coordinate.longitude)
-        
+//        print(myLocation.coordinate.longitude)ff        
 //        let request_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=atm&location=\(myLocation.coordinate.latitude),%\(myLocation.coordinate.longitude)&radius=500&key=\(apiKey)"
 //        
 //        print(request_url)
