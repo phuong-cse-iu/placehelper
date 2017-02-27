@@ -115,11 +115,14 @@ extension MapVC: MKMapViewDelegate {
         activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.excludedActivityTypes = [UIActivityType.postToFacebook, UIActivityType.mail]
         self.present(activityViewController, animated: true, completion: nil)
+    }}
+    extension ViewController:MKMapViewDelegate{
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            let annotationView:MKAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "anno")
+            annotationView.image = #imageLiteral(resourceName: "locate-icon")
+            annotationView.frame.size = CGSize(width: 50, height: 50)
+            return annotationView
+        }
     }
     
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        <#code#>
-//    }
-    
-    
-}
+
